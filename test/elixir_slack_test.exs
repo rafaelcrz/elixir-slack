@@ -1,11 +1,6 @@
 defmodule ElixirSlackTest do
   use ExUnit.Case, async: false
-  doctest ElixirSlack
   alias ElixirSlack.Api.Auth
-
-  test "greets the world" do
-    assert ElixirSlack.hello() == :world
-  end
 
   # @tag :check_valid_token
   # test "when verify a valid token return a {:ok, content}" do
@@ -24,6 +19,6 @@ defmodule ElixirSlackTest do
     token = nil
     assert {:error, "authentication token is missing"} == Auth.verify(token)
     token = ""
-    assert {:error, "authentication token is missing1"} == Auth.verify(token)
+    assert {:error, "authentication token is missing"} == Auth.verify(token)
   end
 end
