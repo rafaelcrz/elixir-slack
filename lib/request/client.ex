@@ -27,7 +27,9 @@ defmodule ElixirSlack.Request.Client do
     status
   end
 
-  def process_response({:ok, %{body: body, headers: _headers, request_url: _url, status_code: _status}}) do
+  def process_response(
+        {:ok, %{body: body, headers: _headers, request_url: _url, status_code: _status}}
+      ) do
     case body do
       %{"error" => reason, "ok" => _ok} -> {:error, reason}
       _ -> {:ok, body}
