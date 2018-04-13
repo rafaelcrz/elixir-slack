@@ -35,9 +35,17 @@ Check if a token is valid and return the information about it.
 
 ```elixir
 iex> ElixirSlack.Api.Auth.verify("valid_token")
-{:ok, content}
+{:ok,
+ %{
+   "ok" => true,
+   "team" => "your team name",
+   "team_id" => "your team id",
+   "url" => "https://your_team_name.slack.com/",
+   "user" => "your_bot_name",
+   "user_id" => "your_user_id"
+ }}
 
 iex> ElixirSlack.Api.Auth.verify("invalid_token")
-{:error, reason}
+{:error, "invalid_auth"}
 ```
 
