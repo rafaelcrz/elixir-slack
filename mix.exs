@@ -9,7 +9,7 @@ defmodule ElixirSlack.MixProject do
       start_permanent: Mix.env() == :prod,
       deps: deps(),
 
-      #Docs
+      # Docs
       name: "ElixirSlack",
       source_url: "https://github.com/rafaelcrz/elixir-slack",
       homepage_url: "",
