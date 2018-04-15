@@ -14,7 +14,7 @@ defmodule ElixirSlack.Auth do
 
   ## Examples
 
-    iex> ElixirSlack.Api.Auth.verify()
+    iex> ElixirSlack.Auth.verify()
       {:ok, %{
         "ok" => true,
         "team" => "your team name",
