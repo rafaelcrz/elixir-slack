@@ -27,7 +27,7 @@ defmodule ElixirSlack.Api.Auth do
       }}
 
     iex> ElixirSlack.Api.Auth.verify("invalid_token")
-      {:error, "invalid_auth"}
+      {:error, reason}
 
     iex> ElixirSlack.Api.Auth.verify(nil)
         {:error, "authentication token is missing"}
