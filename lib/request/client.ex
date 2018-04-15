@@ -1,7 +1,10 @@
-defmodule ElixirSlack.Request.Client do
+defmodule ElixirSlack.Client do
   use HTTPoison.Base
 
-  defp header, do: [{"Content-Type", "application/json; charset=utf-8"}]
+  defp header() do
+    auth_token = System.get_env("BOT_USER_TOKEN") || Application.get_env(:elixir_slack, :bot_user_token)
+    [{"Authorization", "Bearer #{auth_token}"}, {"Content-Type", "application/json; charset=utf-8"}]
+  end
 
   def process_url(url) do
     url
@@ -9,6 +12,10 @@ defmodule ElixirSlack.Request.Client do
 
   defp process_request_body(body) when is_map(body) do
     Poison.encode!(body)
+  end
+
+  defp process_request_body(body) do
+    body
   end
 
   defp process_request_headers(headers) do
