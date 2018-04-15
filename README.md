@@ -5,7 +5,6 @@ A Elixir Slack wrapper api.
 **TODO: Add description**
 - Auth
 	- [x] Verify if the token is valid, checks authentication and get identity info.
-	- [ ] Revokes a token.
 - Bots
 	-  [ ] Bot information
 - Channels
