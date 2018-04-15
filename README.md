@@ -36,7 +36,6 @@ Check if a token is valid and return the information about it.
 iex> ElixirSlack.Auth.verify()
 {:ok,
  %{
-   "ok" => true,
    "team" => "your team name",
    "team_id" => "your team id",
    "url" => "https://your_team_name.slack.com/",
@@ -62,8 +61,7 @@ iex> ElixirSlack.Bot.info("your_bot_id")
     "id" => "id",
     "name" => "bot",
     "updated" => timestamp
-  },
-  "ok" => true
+  }
 }}
 ```
 
