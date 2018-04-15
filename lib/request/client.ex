@@ -28,6 +28,7 @@ defmodule ElixirSlack.Client do
 
   defp process_response_body(body) do
     Poison.decode!(body)
+    |> Map.delete("ok")
   end
 
   def process_status_code(status) do

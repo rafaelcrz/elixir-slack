@@ -16,7 +16,6 @@ defmodule ElixirSlack.Auth do
 
     iex> ElixirSlack.Auth.verify()
       {:ok, %{
-        "ok" => true,
         "team" => "your team name",
         "team_id" => "your team id",
         "url" => "https://your_team_name.slack.com/",
