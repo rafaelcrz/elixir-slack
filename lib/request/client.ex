@@ -40,6 +40,7 @@ defmodule ElixirSlack.Client do
       ) do
     case body do
       %{"error" => reason, "ok" => _ok} -> {:error, reason}
+      %{"error" => reason} -> {:error, reason}
       _ -> {:ok, body}
     end
   end
