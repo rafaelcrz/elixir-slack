@@ -1,6 +1,6 @@
-defmodule AuthTest do
+defmodule ElixirSlack.AuthTest do
   use ExUnit.Case, async: false
-  alias ElixirSlack.Api.Auth
+  alias ElixirSlack.Auth
 
   # @tag :check_valid_token
   # test "when verify a valid token return a {:ok, content}" do
