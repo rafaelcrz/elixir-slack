@@ -11,6 +11,10 @@ defmodule ElixirSlack.Client do
     Poison.encode!(body)
   end
 
+  defp process_request_body(body) do
+    body
+  end
+
   defp process_request_headers(headers) do
     Enum.into(header(), headers)
   end
