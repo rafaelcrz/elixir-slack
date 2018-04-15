@@ -39,7 +39,7 @@ defmodule ElixirSlack.Api.Auth do
   def verify(nil), do: {:error, "authentication token is missing"}
   def verify(""), do: {:error, "authentication token is missing"}
 
-  def verify(auth_token) when is_binary(auth_token) do
+  def verify(auth_token) do
     Client.post("https://slack.com/api/auth.test", %{}, header(auth_token))
     |> Client.process_response()
   end
