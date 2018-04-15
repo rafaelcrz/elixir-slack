@@ -1,4 +1,4 @@
-defmodule ElixirSlack.Request.Client do
+defmodule ElixirSlack.Client do
   use HTTPoison.Base
 
   defp header, do: [{"Content-Type", "application/json; charset=utf-8"}]

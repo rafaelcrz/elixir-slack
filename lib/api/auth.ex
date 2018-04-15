@@ -1,5 +1,5 @@
-defmodule ElixirSlack.Api.Auth do
-  alias ElixirSlack.Request.Client
+defmodule ElixirSlack.Auth do
+  alias ElixirSlack.Client
 
   @moduledoc """
   Authentication module.
