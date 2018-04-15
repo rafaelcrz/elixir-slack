@@ -1,5 +1,7 @@
 # ElixirSlack
 
+[![Build Status](https://semaphoreci.com/api/v1/rafaelcrz/elixir-slack/branches/master/badge.svg)](https://semaphoreci.com/rafaelcrz/elixir-slack)
+
 A Elixir Slack wrapper api.
 
 **TODO: Add description**
