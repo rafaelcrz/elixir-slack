@@ -1,4 +1,4 @@
-defmodule ElixirSlackTest do
+defmodule AuthTest do
   use ExUnit.Case, async: false
   alias ElixirSlack.Api.Auth
 
