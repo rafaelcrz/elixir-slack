@@ -6,7 +6,7 @@ A Elixir Slack wrapper api.
 - Auth
 	- [x] Verify if the token is valid, checks authentication and get identity info.
 - Bots
-	-  [ ] Bot information
+	-  [x] Bot information
 - Channels
 	- [ ] ...
 
@@ -33,7 +33,7 @@ end
 Check if a token is valid and return the information about it.
 
 ```elixir
-iex> ElixirSlack.Api.Auth.verify("valid_token")
+iex> ElixirSlack.Auth.verify()
 {:ok,
  %{
    "ok" => true,
@@ -43,8 +43,27 @@ iex> ElixirSlack.Api.Auth.verify("valid_token")
    "user" => "your_bot_name",
    "user_id" => "your_user_id"
  }}
+```
+#### Bot
+Get user bot information
+```elixir
+iex> ElixirSlack.Bot.info("your_bot_id")
 
-iex> ElixirSlack.Api.Auth.verify("invalid_token")
-{:error, "invalid_auth"}
+{:ok,
+%{
+  "bot" => %{
+    "app_id" => "app_id",
+    "deleted" => false,
+    "icons" => %{
+      "image_36" => "url_image",
+      "image_48" => "url_image",
+      "image_72" => "url_image"
+    },
+    "id" => "id",
+    "name" => "bot",
+    "updated" => timestamp
+  },
+  "ok" => true
+}}
 ```
 
