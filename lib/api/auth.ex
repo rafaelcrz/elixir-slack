@@ -16,14 +16,14 @@ defmodule ElixirSlack.Auth do
 
     iex> ElixirSlack.Auth.verify()
       {:ok, %{
-        "team" => "your team name",
-        "team_id" => "your team id",
+        "team" => "team_name",
+        "team_id" => "UA4R6AAA",
         "url" => "https://your_team_name.slack.com/",
-        "user" => "your_bot_name",
-        "user_id" => "your_user_id"
+        "user" => "mybot",
+        "user_id" => "UA4R6AAA"
       }}
   """
-  @spec verify() :: {atom, binary}
+  @spec verify() :: {atom, map}
   def verify() do
     Client.post(@slack_host<>"/auth.test", %{}, [])
     |> Client.process_response()

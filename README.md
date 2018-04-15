@@ -10,7 +10,8 @@ A Elixir Slack wrapper api.
 - Bots
 	-  [x] Bot information
 - Channels
-	- [ ] ...
+	- [x] Get info
+	- [x] Get all channels on Slack team
 
 
 ## Installation
