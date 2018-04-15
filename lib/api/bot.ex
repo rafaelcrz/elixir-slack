@@ -16,16 +16,16 @@ defmodule ElixirSlack.Bot do
       {:ok,
       %{
         "bot" => %{
-          "app_id" => "app_id",
+          "app_id" => "UA4R6AAA",
           "deleted" => false,
           "icons" => %{
             "image_36" => "url_image",
             "image_48" => "url_image",
             "image_72" => "url_image"
           },
-          "id" => "id",
+          "id" => "BA4KZJDJ",
           "name" => "bot",
-          "updated" => timestamp
+          "updated" => 1523413158
         }
       }}
 
@@ -35,7 +35,7 @@ defmodule ElixirSlack.Bot do
         "ok" => true
       }}
   """
-  @spec info(bot_id :: binary) :: {atom, binary}
+  @spec info(bot_id :: binary) :: {atom, map}
   def info(bot_id \\ "") do
     Client.get(@slack_host<>"/bots.info", [], params: %{bot: bot_id})
     |> Client.process_response()
