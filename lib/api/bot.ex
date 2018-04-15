@@ -26,8 +26,7 @@ defmodule ElixirSlack.Bot do
           "id" => "id",
           "name" => "bot",
           "updated" => timestamp
-        },
-        "ok" => true
+        }
       }}
 
     iex> ElixirSlack.Bot.info()
