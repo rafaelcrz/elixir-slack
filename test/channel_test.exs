@@ -11,4 +11,9 @@ defmodule ElixirSlack.ChannelTest do
   test "get channel information, with a valid id" do
     assert {:ok, _content} = Channel.info("CA3UHUZQA")
   end
+
+  @tag :channel_list
+  test "list all channels in a slack team" do
+    assert {:ok, _content} = Channel.list()
+  end
 end
