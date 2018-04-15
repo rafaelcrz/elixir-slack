@@ -5,6 +5,8 @@ defmodule ElixirSlack.Api.Auth do
   Authentication module.
   """
 
+  @slack_host Application.get_env(:elixir_slack, :slack_host)
+
   defp header(auth_token) do
     [{"Authorization", "Bearer #{auth_token}"}]
   end
@@ -40,7 +42,7 @@ defmodule ElixirSlack.Api.Auth do
   def verify(""), do: {:error, "authentication token is missing"}
 
   def verify(auth_token) do
-    Client.post("https://slack.com/api/auth.test", %{}, header(auth_token))
+    Client.post(@slack_host<>"/auth.test", %{}, header(auth_token))
     |> Client.process_response()
   end
 end
