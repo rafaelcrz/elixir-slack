@@ -7,7 +7,7 @@ defmodule ElixirSlack.Request.Client do
     url
   end
 
-  defp process_request_body(body) do
+  defp process_request_body(body) when is_map(body) do
     Poison.encode!(body)
   end
 
