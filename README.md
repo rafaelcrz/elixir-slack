@@ -34,7 +34,9 @@ end
 ## Setup
 Add the environment var BOT_USER_TOKEN or add the following configuration on your application 
 
-```config :elixir_slack, bot_user_token: "YOUR BOT USER TOKEN"```
+```elixir 
+config :elixir_slack, bot_user_token: "YOUR BOT USER TOKEN"
+```
 
 ## Usage
 
